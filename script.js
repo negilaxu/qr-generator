@@ -16,7 +16,7 @@ const defaultUrl = 'https://google.com';
 let colorLight = '#fff',
   colorDark = '#000',
   text = defaultUrl,
-  size = 300;
+  size = 400;
 
 function handleDarkColor(e) {
   colorDark = e.target.value;
@@ -39,6 +39,8 @@ function handleQRText(e) {
 
 async function generateQRCode() {
   qrContainer.innerHTML = '';
+  qrContainer.style.width = `${size}px`;
+  qrContainer.style.height = `${size}px`;
   new QRCode('qr-code', {
     text,
     height: size,
