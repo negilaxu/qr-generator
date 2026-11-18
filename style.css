@@ -22,9 +22,29 @@ section {
 }
 
 input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     border: none;
     width: 32.5%;
     height: 40px;
+    padding: 0;
+    border-radius: 3px;
+    background: none;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 3px;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: none;
     border-radius: 3px;
 }
 

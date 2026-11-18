@@ -5,18 +5,18 @@ const qrContainer = document.querySelector('#qr-code');
 const qrText = document.querySelector('.qr-text');
 const shareBtn = document.querySelector('.share-btn');
 const sizes = document.querySelector('.sizes');
+const defaultUrl = 'https://google.com';
+
+let colorLight = light.value || '#ffffff',
+  colorDark = dark.value || '#000000',
+  text = defaultUrl,
+  size = sizes.value || '400';
 
 dark.addEventListener('input', handleDarkColor);
 light.addEventListener('input', handleLightColor);
 qrText.addEventListener('input', handleQRText);
 sizes.addEventListener('change', handleSize);
 shareBtn.addEventListener('click', handleShare);
-
-const defaultUrl = 'https://google.com';
-let colorLight = '#fff',
-  colorDark = '#000',
-  text = defaultUrl,
-  size = 400;
 
 function handleDarkColor(e) {
   colorDark = e.target.value;
